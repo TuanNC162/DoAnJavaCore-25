@@ -31,5 +31,13 @@
    4. Thay đổi mật khẩu
 # Sơ đồ Class Diagram
 ![Diagram](https://github.com/TuanNC162/DoAnJavaCore-25/blob/main/ManagementCenimaDiagram.drawio%20.png)
+# 3. Kết quả thu được sau khi làm đồ án
+   - Hiểu rõ hơn về các phần đã học ở khóa JavaCore
+   - Viết được phần mềm cơ bản về việc quản lý rạp chiếu phim
+# 4. Cải thiện và nâng cấp tính năng cho phần mềm
+   - Tích hợp thanh toán qua Paypal, Momo,...
+   - Cải thiện giao diện người dùng được đẹp hơn và tốt hơn
+   - Phần mềm có thể kết nối tới nhiều phần mềm khách, nhiều ứng dụng mạng xã hội khác để tăng số lượng người dùng
+   - Nâng cấp tính năng sắp xếp lịch chiếu một cách tự động, tiết kiệm thời gian và tối ưu hơn
 
 
