@@ -131,20 +131,6 @@ public class UserService {
             }
             System.out.println("Tài khoản đã tồn tại. Vui lòng nhập lại tên tài khoản");
         }while (true);
-//            System.out.println("Nhập email của bạn:");
-//            String email;
-//            do {
-//                email = new Scanner(System.in).nextLine();
-//                if (userList.isEmpty()){
-//                    user.setEmail(email);
-//                    break;
-//                }
-//                if (checkEmail(email)){
-//                    user.setEmail(email);
-//                    break;
-//                }
-//                System.out.println("Email đã tồn tại. Vui lòng nhập lại email!");
-//            }while (true);
         do {
             System.out.print("Nhập mật khẩu của bạn: ");
             String password =new Scanner(System.in).nextLine();

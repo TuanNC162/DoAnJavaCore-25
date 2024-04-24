@@ -1,6 +1,7 @@
 package service;
 
 import entity.Movie;
+import statics.ConvertMoney;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -36,7 +37,7 @@ public class MovieService {
             System.out.println("Đạo diễn: "+ movie.getDirector());
             System.out.println("Thời lượng phim: "+ movie.getMovieDuration() + "phút");
             System.out.println("Năm sản xuất: "+ movie.getPublishYear());
-            System.out.println("Giá tiền: " +movie.getPrice()+ "VNĐ");
+            System.out.println("Giá tiền: " + ConvertMoney.formatPriceVND(movie.getPrice()));
             System.out.println("***************************************************");
             return;
         }
@@ -56,7 +57,7 @@ public class MovieService {
             System.out.println("Đạo diễn: "+ movieList.get(i).getDirector());
             System.out.println("Thời lượng phim: "+ movieList.get(i).getMovieDuration());
             System.out.println("Năm sản xuất: "+ movieList.get(i).getPublishYear());
-            System.out.println("Giá tiền: "+ movieList.get(i).getPrice()+ "VNĐ");
+            System.out.println("Giá tiền: "+ ConvertMoney.formatPriceVND(movieList.get(i).getPrice()));
             System.out.println("***************************************************");
         }
     }
@@ -124,7 +125,7 @@ public class MovieService {
                 System.out.println("Đạo diễn: "+ movieList.get(i).getDirector());
                 System.out.println("Thời lượng phim: "+ movieList.get(i).getMovieDuration());
                 System.out.println("Năm sản xuất: "+ movieList.get(i).getPublishYear());
-                System.out.println("Giá Tiền: "+ movieList.get(i).getPrice()+ "VNĐ");
+                System.out.println("Giá Tiền: "+ ConvertMoney.formatPriceVND(movieList.get(i).getPrice()));
                 System.out.println("***************************************************");
                 return;
             }

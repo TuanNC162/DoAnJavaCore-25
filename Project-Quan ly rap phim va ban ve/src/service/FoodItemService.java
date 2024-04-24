@@ -1,6 +1,7 @@
 package service;
 
 import entity.FoodItem;
+import statics.ConvertMoney;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -93,7 +94,7 @@ public class FoodItemService {
         for (int i = 0; i < foodItemList.size(); i++) {
             if (foodItemList.get(i).getTypeFoodItem().value.equalsIgnoreCase("Đồ uống")){
                 System.out.print("Tên: "+foodItemList.get(i).getNameFood() +" ");
-                System.out.println("Giá: "+foodItemList.get(i).getPriceFood()+" VND");
+                System.out.println("Giá: "+ ConvertMoney.formatPriceVND(foodItemList.get(i).getPriceFood()));
                 System.out.println("Số lượng còn lại: "+foodItemList.get(i).getRemainingQuantity());
             }
         }
@@ -101,7 +102,7 @@ public class FoodItemService {
         for (int i = 0; i < foodItemList.size(); i++) {
             if (foodItemList.get(i).getTypeFoodItem().value.equalsIgnoreCase("Đồ ăn")) {
                 System.out.print("Tên: "+foodItemList.get(i).getNameFood() +" ");
-                System.out.println("Giá: " + foodItemList.get(i).getPriceFood() + " VND");
+                System.out.println("Giá: " + ConvertMoney.formatPriceVND(foodItemList.get(i).getPriceFood()));
                 System.out.println("Số lượng còn lại: "+foodItemList.get(i).getRemainingQuantity());
             }
         }
@@ -118,7 +119,7 @@ public class FoodItemService {
         for (int i = 0; i < foodItemList.size() ; i++) {
             if (foodItemList.get(i).getNameFood().equalsIgnoreCase(name)){
                 System.out.print("Tên: "+foodItemList.get(i).getNameFood()+" ");
-                System.out.println("Giá: "+foodItemList.get(i).getPriceFood()+" VND");
+                System.out.println("Giá: "+ ConvertMoney.formatPriceVND(foodItemList.get(i).getPriceFood()));
                 return;
             }
         }
