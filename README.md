@@ -5,4 +5,4 @@
    - Admin
    - Khách hàng
 # UML Use Case Diagram:
-![Diagram]([https://techmaster.vn/resources/image/logo.png](https://github.com/TuanNC162/DoAnJavaCore-25/blob/main/UseCaseDiagramManagementCinema.drawio.png))
+![Diagram](https://github.com/TuanNC162/DoAnJavaCore-25/blob/main/UseCaseDiagramManagementCinema.drawio.png)
