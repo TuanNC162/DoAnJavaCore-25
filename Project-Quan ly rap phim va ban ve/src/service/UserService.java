@@ -144,34 +144,29 @@ public class UserService {
         }while (true);
     }
 
-    public void changePassword() {
-        String name;
+    public void changePassword(String userName) {
         String passwordOld;
         String passwordNew;
         String passwordNew1;
-        do {
-            System.out.println("Nhập tên đăng nhập ");
-            name = new Scanner(System.in).nextLine();
-            System.out.println("Nhập mật khẩu cũ ");
-            passwordOld = new Scanner(System.in).nextLine();
-            System.out.println("Nhập mật khẩu mới");
-            passwordNew = new Scanner(System.in).nextLine();
-            System.out.println("Nhập lại mật khẩu mới");
-            passwordNew1 = new Scanner(System.in).nextLine();
-            for (int i = 0; i < userList.size(); i++) {
-                if (userList.get(i).getAccountName().equals(name)) {
-                    if ((userList.get(i).getPassword().equals(passwordOld) && passwordNew.equals(passwordNew1))) {
-                        userList.get(i).setPassword(passwordNew);
+        for (User user : userList) {
+            if (user.getAccountName().equals(userName)) {
+                while (true){
+                    System.out.println("Nhập mật khẩu cũ ");
+                    passwordOld = new Scanner(System.in).nextLine();
+                    System.out.println("Nhập mật khẩu mới");
+                    passwordNew = new Scanner(System.in).nextLine();
+                    System.out.println("Nhập lại mật khẩu mới");
+                    passwordNew1 = new Scanner(System.in).nextLine();
+                    if (user.getPassword().equals(passwordOld) && passwordNew.equals(passwordNew1)) {
+                        user.setPassword(passwordNew);
                         writeFileUser(userList);
                         System.out.println("Đổi Mật khẩu Thành công");
                         break;
                     }
                 }
-                if (!userList.get(i).getAccountName().equals(name)) {
-                    System.out.println("Không có tên đăng nhập nào như trên");
-                }
             }
-        } while (true);
+        }
+
     }
 
     public void forgotPass() {
@@ -195,7 +190,7 @@ public class UserService {
                     }
                 }
             }
-                System.out.println("Email không đúng. Chưa tồn tại tài khoản.");
+            System.out.println("Email không đúng. Chưa tồn tại tài khoản.");
     }
 
     public int nextId(){

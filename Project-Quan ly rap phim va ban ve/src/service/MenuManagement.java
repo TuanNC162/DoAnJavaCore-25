@@ -79,15 +79,15 @@ public class MenuManagement {
             return;
         }
         if (user != null) {
-            showMenuUser();
+            showMenuUser(userName);
         }
         System.out.println("Tên tài khoản hoặc mật khẩu không đúng. Vui lòng nhập lại! ");
         logInAndCreateAccount();
     }
 
-    public void showMenuUser (){
+    public void showMenuUser (String userName){
         while (true) {
-            System.out.println("---------- CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI RẠP PHIM CỦA CHÚNG TÔI ---------");
+            System.out.println("----------CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI RẠP PHIM CỦA CHÚNG TÔI ---------");
             System.out.println("Mời bạn lựa chọn dịch vụ: ");
             System.out.println("1. Xem thông tin danh sách các phim đang chiếu");
             System.out.println("2. Tìm kiếm phim theo tên");
@@ -122,7 +122,7 @@ public class MenuManagement {
                     movieTicketService.bookTickets();
                     break;
                 case 5:
-                    userService.changePassword();
+                    userService.changePassword(userName);
                     break;
                 case 6:
                     logInAndCreateAccount();
@@ -133,7 +133,7 @@ public class MenuManagement {
 
     public void showMenuAdmin (){
         while (true){
-            System.out.println("---------- BẠN ĐÃ TRUY CẬP QUYỀN QUẢN TRỊ THÀNH CÔNG ---------");
+            System.out.println("----------Chào mừng quản trị viên---------");
             System.out.println("Mời bạn chọn tính năng: ");
             System.out.println("1. Quản lý phim");
             System.out.println("2. Quản lý đồ ăn");
